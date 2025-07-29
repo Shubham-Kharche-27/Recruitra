@@ -33,4 +33,9 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleGlobalException(CompanyExistException ex){
         return new ResponseEntity<>(ex.getMessage(),HttpStatus.CONFLICT);
     }
+
+    @ExceptionHandler(ApplicantExistException.class)
+    public ResponseEntity<String> handleGlobalException(ApplicantExistException ex){
+        return new ResponseEntity<>(ex.getMessage(),HttpStatus.CONFLICT);
+    }
 }
