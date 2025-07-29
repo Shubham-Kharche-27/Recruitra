@@ -17,8 +17,8 @@ public class CompanyController {
 
     @GetMapping("/get")
     public ResponseEntity<Page<CompanyDto>> getAllCompany(
-            @RequestParam(value = "pageNum", defaultValue = "3") int pageNum,
-            @RequestParam(value = "pageSize", defaultValue = "1") int pageSize,
+            @RequestParam(value = "pageNum", defaultValue = "1") int pageNum,
+            @RequestParam(value = "pageSize", defaultValue = "3") int pageSize,
             @RequestParam(defaultValue = "companyId") String sortBy
     ) {
         return new ResponseEntity<>(companyService.getAllCompanyData(pageNum - 1, pageSize, sortBy), HttpStatus.OK);

@@ -19,6 +19,7 @@ public class Job {
     private String jobTitle;
     private String jobDescription;
     private String jobLocation;
+    @Enumerated(EnumType.STRING)
     private EmpType employeeType;
     private String salaryRange;
     private String experienceLevel;

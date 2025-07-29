@@ -22,6 +22,7 @@ public class Application {
     @JsonBackReference(value = "applicantReference")
     private Applicant applicant;
 
+    @Enumerated(EnumType.STRING)
     private ApplicationStatus applicationStatus;
     private LocalDateTime appliedAt;
     private String notes;
