@@ -21,7 +21,7 @@ public class Applicant {
     private LocalDateTime createdAt;
 
     @OneToMany(mappedBy = "applicant", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JsonManagedReference
+    @JsonManagedReference(value = "applicantReference")
     private Set<Application> applicationSet = new HashSet<>();
 
     @PrePersist

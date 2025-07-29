@@ -14,12 +14,12 @@ public class Application {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "jobId")
-    @JsonBackReference
+    @JsonBackReference(value = "jobReference")
     private Job job;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "applicantId")
-    @JsonBackReference
+    @JsonBackReference(value = "applicantReference")
     private Applicant applicant;
 
     private ApplicationStatus applicationStatus;

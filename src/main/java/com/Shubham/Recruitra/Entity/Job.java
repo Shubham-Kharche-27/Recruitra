@@ -29,11 +29,11 @@ public class Job {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "companyId")
-    @JsonBackReference
+    @JsonBackReference(value = "companyReference")
     private Company company;
 
     @OneToMany(mappedBy = "job", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JsonManagedReference
+    @JsonManagedReference(value = "jobReference")
     private Set<Application> applicationSet = new HashSet<>();
 
     @PrePersist

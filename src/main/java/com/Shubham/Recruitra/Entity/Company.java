@@ -23,7 +23,7 @@ public class Company {
     public LocalDateTime createdAt;
 
     @OneToMany(mappedBy = "company", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JsonManagedReference
+    @JsonManagedReference(value = "companyReference")
     private Set<Job> jobSet = new HashSet<>();
 
     @PrePersist

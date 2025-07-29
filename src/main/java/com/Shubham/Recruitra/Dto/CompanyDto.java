@@ -2,11 +2,10 @@ package com.Shubham.Recruitra.Dto;
 
 import com.Shubham.Recruitra.Entity.Job;
 
-import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ComapnyDto {
+public class CompanyDto {
     public Long companyId;
     public String companyName;
     public String companyIndustry;

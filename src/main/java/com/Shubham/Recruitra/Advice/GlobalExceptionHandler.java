@@ -1,9 +1,6 @@
 package com.Shubham.Recruitra.Advice;
 
-import com.Shubham.Recruitra.Exception.ApplicantNotFoundException;
-import com.Shubham.Recruitra.Exception.ApplicationNotFoundException;
-import com.Shubham.Recruitra.Exception.CompanyNotFoundException;
-import com.Shubham.Recruitra.Exception.JobNotFoundException;
+import com.Shubham.Recruitra.Exception.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -30,5 +27,10 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ApplicationNotFoundException.class)
     public ResponseEntity<String> handleGlobalException(ApplicationNotFoundException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(CompanyExistException.class)
+    public ResponseEntity<String> handleGlobalException(CompanyExistException ex){
+        return new ResponseEntity<>(ex.getMessage(),HttpStatus.CONFLICT);
     }
 }
