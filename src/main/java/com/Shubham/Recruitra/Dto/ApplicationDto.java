@@ -6,11 +6,13 @@ import com.Shubham.Recruitra.Entity.Job;
 
 import java.time.LocalDateTime;
 
+import static com.Shubham.Recruitra.Entity.Enums.ApplicationStatus.Pending;
+
 public class ApplicationDto {
     private Long applicationId;
     private Long jobId;
     private Long applicantId;
-    private ApplicationStatus applicationStatus;
+    private ApplicationStatus applicationStatus = Pending;
     private LocalDateTime appliedAt;
     private String notes;
 
