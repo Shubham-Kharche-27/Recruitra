@@ -1,11 +1,9 @@
 package com.Shubham.Recruitra.Dto;
 
 import com.Shubham.Recruitra.Entity.Application;
-import com.Shubham.Recruitra.Entity.Company;
 import com.Shubham.Recruitra.Entity.Enums.EmpType;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,7 +18,7 @@ public class JobDto {
     private String skillRequired;
     private LocalDate jobDeadline;
     private Long companyId;
-    private Set<Application> applicationSet = new HashSet<>();
+    private Set<Application> applications = new HashSet<>();
 
     public Long getJobId() {
         return jobId;
@@ -102,11 +100,11 @@ public class JobDto {
         this.companyId = companyId;
     }
 
-    public Set<Application> getApplicationSet() {
-        return applicationSet;
+    public Set<Application> getApplications() {
+        return applications;
     }
 
-    public void setApplicationSet(Set<Application> applicationSet) {
-        this.applicationSet = applicationSet;
+    public void setApplications(Set<Application> applications) {
+        this.applications = applications;
     }
 }

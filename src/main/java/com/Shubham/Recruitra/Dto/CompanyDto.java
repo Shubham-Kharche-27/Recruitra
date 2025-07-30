@@ -13,7 +13,7 @@ public class CompanyDto {
     public String companyWebsite;
     public String companyEmail;
     public String contactNum;
-    private Set<Job> jobSet = new HashSet<>();
+    private Set<Job> jobs = new HashSet<>();
 
     public Long getCompanyId() {
         return companyId;
@@ -71,11 +71,11 @@ public class CompanyDto {
         this.contactNum = contactNum;
     }
 
-    public Set<Job> getJobSet() {
-        return jobSet;
+    public Set<Job> getJobs() {
+        return jobs;
     }
 
-    public void setJobSet(Set<Job> jobSet) {
-        this.jobSet = jobSet;
+    public void setJobs(Set<Job> jobs) {
+        this.jobs = jobs;
     }
 }

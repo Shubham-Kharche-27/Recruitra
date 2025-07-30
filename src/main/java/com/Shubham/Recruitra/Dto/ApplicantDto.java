@@ -2,7 +2,6 @@ package com.Shubham.Recruitra.Dto;
 
 import com.Shubham.Recruitra.Entity.Application;
 
-import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -14,7 +13,7 @@ public class ApplicantDto {
     private String applicantResumeLink;
     private String profileSummary;
     private String applicantSkills;
-    private Set<Application> applicationSet = new HashSet<>();
+    private Set<Application> applications = new HashSet<>();
 
     public Long getApplicantId() {
         return applicantId;
@@ -72,11 +71,11 @@ public class ApplicantDto {
         this.applicantSkills = applicantSkills;
     }
 
-    public Set<Application> getApplicationSet() {
-        return applicationSet;
+    public Set<Application> getApplication() {
+        return applications;
     }
 
-    public void setApplicationSet(Set<Application> applicationSet) {
-        this.applicationSet = applicationSet;
+    public void setApplication(Set<Application> application) {
+        this.applications = application;
     }
 }
